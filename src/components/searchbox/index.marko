@@ -1,7 +1,72 @@
 style {
-    .searchbox {
+    .search-header {
+        margin-top: 5px;
+        display: flex;
+        width: 100%
+    }
+    .search-box {
+        width: 100%;
+    }
+    .search-box > input {
+        width: 100%;
+    }
 
+    .search-button-icon {
+        display: none;
+    }
+
+    .search-button {
+        width: 87px;
+        padding: .5em 1.2em !important;
+        margin-left: 5px !important;
+        font-size: 16px !important;
+        text-shadow: 0 1px 0 rgba(0,0,0,.2);
+        background: -webkit-gradient(linear,left top,left bottom,from(#0079bc),to(#00509d));
+        background: -moz-linear-gradient(top,#0079bc,#00509d);
+    }
+
+    @media only screen and (max-width: 764px) {
+        .search-button {
+            display:block;
+            width: 48px;
+            paddinng: 0 !important;
+        }
+        .search-button-text {
+            display: none;
+        }
+        .search-button-icon {
+            padding: 0px 10px;
+        }
+        .category {
+            width: 8px;
+        }
+    }
+
+    .search-extended {
+        width: 64px;
+        heigh: 40px;
+        padding: 0 10px;
+        line-height: 40px;
+        font-size: 11px;
+    }
+
+    @media only screen and (max-width: 960px) {
+        .search-extended {
+            display: none;
+        }
     }
 }
 
-div.searchbox
+<div class="search-header">
+    <ebay-textbox class="search-box" placeholder="Was suchen Sie?" />
+    <!--ebay-select>
+        <ebay-select-option text="Alle Kategorien"/>
+    </ebay-select-->
+    <ebay-button class="search-button" priority="primary">
+        <span class="search-button-text">Finden</span>
+        <ebay-icon class="search-button-icon" type="background" name="search"/>
+    </ebay-button>
+    <div class="search-extended">
+        Erweitert
+    </div>
+</div>

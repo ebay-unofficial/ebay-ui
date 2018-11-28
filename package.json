@@ -3,8 +3,11 @@
   "description": "Simple UI where you can easily click together an API request",
   "version": "0.1.0",
   "dependencies": {
-    "marko": "^4.13.10",
-    "marko-starter": "^2.0.4"
+    "@ebay/ebayui-core": "^1.2.0",
+    "@ebay/skin": "^6.2.0",
+    "marko": "^4.13.13",
+    "marko-starter": "^2.0.4",
+    "marko-widgets": "^7.0.1"
   },
   "devDependencies": {
     "marko-prettyprint": "^1.5.2",
