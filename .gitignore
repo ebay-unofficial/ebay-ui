@@ -4,6 +4,7 @@
 
 # Editor Configs
 .idea
+*.iml
 .vscode
 *.sublime*
 
