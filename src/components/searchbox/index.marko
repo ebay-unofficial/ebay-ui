@@ -1,3 +1,18 @@
+class {
+    onCreate() {
+        this.state = {
+            text:'hi'
+        };
+    }
+    findItems() {
+        alert(this.state.text);
+    }
+    setText(event) {
+        console.log(event);
+        this.state.text = event.value;
+    }
+}
+
 style {
     .search-header {
         margin-top: 5px;
@@ -58,14 +73,16 @@ style {
 }
 
 <div class="search-header">
-    <ebay-textbox class="search-box" placeholder="Was suchen Sie?" />
+    <ebay-textbox on-textbox-change("setText") class="search-box" placeholder="Was suchen Sie?" />
     <!--ebay-select>
         <ebay-select-option text="Alle Kategorien"/>
     </ebay-select-->
-    <ebay-button class="search-button" priority="primary">
-        <span class="search-button-text">Finden</span>
-        <ebay-icon class="search-button-icon" type="background" name="search"/>
-    </ebay-button>
+    <div >
+        <ebay-button on-button-click("findItems") class="search-button" priority="primary">
+            <span class="search-button-text">Finden</span>
+            <ebay-icon class="search-button-icon" type="background" name="search"/>
+        </ebay-button>
+    </div>
     <div class="search-extended">
         Erweitert
     </div>
